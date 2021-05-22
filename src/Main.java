@@ -120,8 +120,8 @@ public class Main extends javax.swing.JFrame {
             
             Class.forName("com.mysql.jdbc.Driver");
             
-//            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/dreamhouse2020", "ignasi", "");
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/dreamhouse2020?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "ignasi", "");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/dreamhouse2020", "ignasi", "");
+            //c = DriverManager.getConnection("jdbc:mysql://localhost:3306/dreamhouse2020?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "ignasi", "");
             
             JOptionPane.showMessageDialog(this, "Connection established", "Status", JOptionPane.INFORMATION_MESSAGE);
             
