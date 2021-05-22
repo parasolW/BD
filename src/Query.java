@@ -86,13 +86,13 @@ public class Query extends javax.swing.JDialog {
 
     private void btn_branchesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_branchesActionPerformed
         
-        ResultSet result = executeQuery(con, "SELECT * from branch;");            
+        ResultSet result = executeQuery(con, "SELECT * from client;");            
         
-        loadBranches(result);
+        loadClientBranches(result);
         
     }//GEN-LAST:event_btn_branchesActionPerformed
 
-    private void loadBranches(ResultSet branches){
+    /*private void loadBranches(ResultSet branches){
         
         DefaultListModel model = new DefaultListModel();
         
@@ -108,6 +108,37 @@ public class Query extends javax.swing.JDialog {
                 String postcode = rs.getString(4);
                                
                 String result = branch_id + " - " + street + " - " + city + " - " + postcode;
+                
+                model.addElement(result);                        
+               
+            }
+            
+        } catch (SQLException e){
+            
+             JOptionPane.showMessageDialog(this, e.getMessage(), "Status", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        this.list_branches.setModel(model);
+    */
+        private void loadClientBranches(ResultSet branches){
+        
+        DefaultListModel model = new DefaultListModel();
+        
+        model.clear();
+        
+        try {
+            
+            while ( rs.next() ) {            
+            
+                String client_id = rs.getString(1);
+                String fname = rs.getString(2);
+                String lname = rs.getString(3);
+                String telnumber = rs.getString(4);
+                String pref_type = rs.getString(5);
+                String max_rent= rs.getString(6);
+                
+                               
+                String result = client_id + " - " + fname + " - " + lname + " - " + telnumber+"-"+pref_type+"-"+max_rent;
                 
                 model.addElement(result);                        
                
