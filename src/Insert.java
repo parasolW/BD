@@ -43,40 +43,44 @@ public class Insert extends javax.swing.JDialog {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txt_id = new javax.swing.JTextField();
-        txt_street = new javax.swing.JTextField();
-        txt_city = new javax.swing.JTextField();
-        txt_postcode = new javax.swing.JTextField();
+        txt_name = new javax.swing.JTextField();
+        txt_lname = new javax.swing.JTextField();
+        telnumber = new javax.swing.JTextField();
         btn_insert = new javax.swing.JButton();
+        pref_type = new javax.swing.JTextField();
+        Max_rent = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("Insert new branch");
+        jLabel1.setText("Insert new client");
 
-        jLabel2.setText("Branch ID");
+        jLabel2.setText("Client ID");
 
-        jLabel3.setText("Street");
+        jLabel3.setText("Fname");
 
-        jLabel4.setText("City");
+        jLabel4.setText("Lname");
 
-        jLabel5.setText("Postcode");
+        jLabel5.setText("Telnumber");
 
-        txt_id.setText("For instance, B006");
+        txt_id.setText("CR99");
         txt_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_idActionPerformed(evt);
             }
         });
 
-        txt_street.setText("Street");
-        txt_street.addActionListener(new java.awt.event.ActionListener() {
+        txt_name.setText("QQQ");
+        txt_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_streetActionPerformed(evt);
+                txt_nameActionPerformed(evt);
             }
         });
 
-        txt_city.setText("City");
+        txt_lname.setText("City");
 
-        txt_postcode.setText("Postcode");
+        telnumber.setText("1214241252");
 
         btn_insert.setText("INSERT");
         btn_insert.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +88,19 @@ public class Insert extends javax.swing.JDialog {
                 btn_insertActionPerformed(evt);
             }
         });
+
+        pref_type.setText("Flat");
+
+        Max_rent.setText("100");
+        Max_rent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Max_rentActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Max_rent");
+
+        jLabel7.setText("Pref_type");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,20 +113,24 @@ public class Insert extends javax.swing.JDialog {
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_id, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                            .addComponent(txt_street)
-                            .addComponent(txt_city)
-                            .addComponent(txt_postcode)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(btn_insert))
+                            .addComponent(txt_id)
+                            .addComponent(txt_name)
+                            .addComponent(txt_lname)
+                            .addComponent(telnumber)
+                            .addComponent(Max_rent)
+                            .addComponent(pref_type, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jLabel1)))
-                .addContainerGap(152, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(btn_insert)))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,18 +144,26 @@ public class Insert extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_street, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txt_city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_lname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txt_postcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(telnumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(pref_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(Max_rent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
                 .addComponent(btn_insert)
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         pack();
@@ -150,13 +179,17 @@ public class Insert extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_idActionPerformed
 
-    private void txt_streetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_streetActionPerformed
+    private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_streetActionPerformed
+    }//GEN-LAST:event_txt_nameActionPerformed
+
+    private void Max_rentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Max_rentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Max_rentActionPerformed
     
     public String getDataNewBranch(){
     
-        String sql = "INSERT INTO branch (branch_id, street, city, postcode) "
+        String sql = "INSERT INTO client (client_id, fname, lname, telnumber, pref_type, max_rent) "
         
                 + "VALUES (" + 
                 
@@ -164,17 +197,20 @@ public class Insert extends javax.swing.JDialog {
                 
                 + "," + 
                 
-                "'" + this.txt_street.getText() + "'"
+                "'" + this.txt_name.getText() + "'"
                 
                 + "," +
                 
-                "'" + this.txt_city.getText() + "'"
+                "'" + this.txt_lname.getText() + "'"
                 
                 + "," +
                 
-                "'" + this.txt_postcode.getText() + "'" +
-                
-                ");";
+                "'" + this.telnumber.getText() + "'" 
+                +"," +
+                "'" + this.pref_type.getText() + "'"
+                +"," +
+                 "'" + this.Max_rent.getText() + "'"
+                +");";
         
         System.out.println(sql);
         
@@ -190,7 +226,7 @@ public class Insert extends javax.swing.JDialog {
         
             stmt.executeUpdate(sql);
             
-            JOptionPane.showMessageDialog(this, "New branch created!", "Status", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "New client created!", "Status", JOptionPane.INFORMATION_MESSAGE);
             
         } catch (SQLException e){
             
@@ -204,15 +240,19 @@ public class Insert extends javax.swing.JDialog {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Max_rent;
     private javax.swing.JButton btn_insert;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txt_city;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField pref_type;
+    private javax.swing.JTextField telnumber;
     private javax.swing.JTextField txt_id;
-    private javax.swing.JTextField txt_postcode;
-    private javax.swing.JTextField txt_street;
+    private javax.swing.JTextField txt_lname;
+    private javax.swing.JTextField txt_name;
     // End of variables declaration//GEN-END:variables
 }
